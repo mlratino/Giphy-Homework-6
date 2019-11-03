@@ -81,17 +81,18 @@ $(document).ready(function() {
   });
 console.log("Mose is the best");
   $("#add-character").on("click", function(event) {
+    var newCharacterArray = [];
     event.preventDefault();
-    var newCharacter = $("input").eq(0).val();
+    var newCharacter = $("input").val();
 
-    if (newCharacter.length > 2) {
-      characters.push(newCharacter);
-    }
+   
+      newCharacterArray.push(newCharacter);
+    
 
-    populateButtons(characters, "character-button", "#character-buttons");
+    populateButtons(newCharacterArray,"character-button","#newButton");
 
   });
-
-  populateButtons(characters, "character-button", "#character-buttons");
+// create a new array and pushe the input character in.
+  populateButtons(characters,"character-button","#character-buttons");
 });
 console.log("That's what she said!");
